@@ -19,10 +19,10 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('✅ MongoDB connected'))
     .catch((err) => console.error('❌ MongoDB connection error:', err));
 
-// Routes
+
 app.use('/api/todos', todoRoutes);
 
-// Start the Server
+
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
 });
